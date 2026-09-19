@@ -1,0 +1,26 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalatroAP/note-taking-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/BalatroAP/note-taking-app/issues"
+  },
+  "homepage": "https://github.com/BalatroAP/note-taking-app#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.10.1",
+    "nodemon": "^3.1.14"
+  }
+}
