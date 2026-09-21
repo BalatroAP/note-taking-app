@@ -5,7 +5,7 @@ import app from "./server.js";
 import NoteDao from "./dao/noteDAO.js";
 
 async function main() {
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 5001;
 
   try {
     const client = await mongoose.createConnection(process.env.MONGO_URI, {

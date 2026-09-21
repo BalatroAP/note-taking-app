@@ -11,6 +11,16 @@ export default class NoteDao {
     }
   }
 
+  static async getNotes() {
+    try {
+      let cursor = await note.find();
+      return await cursor.toArray();
+    } catch (err) {
+      console.error(`Unable to issue find command, ${err}`);
+      return [];
+    }
+  }
+
   static async addNote(noteContent, date) {
     try {
       const newNote = {

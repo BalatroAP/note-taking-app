@@ -6,6 +6,7 @@ const router = express.Router();
 
 router
   .route("/")
+  .get(NoteController.apiGetNotes)
   .post(NoteController.apiPostNote)
   .put(NoteController.apiUpdateNote)
   .delete(NoteController.apiDeleteNote);

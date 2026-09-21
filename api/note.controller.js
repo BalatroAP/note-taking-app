@@ -1,6 +1,21 @@
+import { response } from "express";
 import NoteDao from "../dao/noteDAO.js";
 
 export default class NoteController {
+  static async apiGetNotes(req, res, next) {
+    try {
+      let notes = await NoteDao.getNotes();
+
+      let response = {
+        notes,
+      };
+
+      res.json(response);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  }
+
   static async apiPostNote(req, res, next) {
     try {
       const date = new Date();
