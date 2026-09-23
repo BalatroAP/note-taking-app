@@ -8,7 +8,7 @@ async function main() {
   const PORT = process.env.PORT || 5001;
 
   try {
-    const client = await mongoose.createConnection(process.env.MONGO_URI, {
+    const client = mongoose.createConnection(process.env.MONGO_URI, {
       dbName: process.env.MONGO_COLLECTION,
     });
 

@@ -21,9 +21,10 @@ export default class NoteDao {
     }
   }
 
-  static async addNote(noteContent, date) {
+  static async addNote(noteTitle, noteContent, date) {
     try {
       const newNote = {
+        title: noteTitle,
         content: noteContent,
         created_date: date,
         last_updated_date: date,

@@ -8,10 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello world</h1>");
-});
-
 app.use("/api/v1/note", note);
 
 app.use((req, res) => {

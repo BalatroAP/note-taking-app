@@ -20,8 +20,9 @@ export default class NoteController {
     try {
       const date = new Date();
       const noteContent = req.body.content;
+      const noteTitle = req.body.title;
 
-      await NoteDao.addNote(noteContent, date);
+      await NoteDao.addNote(noteTitle, noteContent, date);
 
       res.json({ status: "success" });
     } catch (err) {

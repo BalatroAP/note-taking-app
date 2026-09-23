@@ -1,0 +1,48 @@
+:root {
+  --first: #606c38;
+  --second: #283618;
+  --third: #fefae0;
+  --fourth: #dda15e;
+  --fifth: #bc6c25;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  background: var(--third);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  margin: 0px 3px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.note * {
+  margin-left: 5px;
+}
+
+.date {
+  font-size: 10px;
+}
+
+h3 {
+  text-transform: capitalize;
+}
+
+button {
+  margin-bottom: 5px;
+  background-color: var(--fourth);
+  border: none;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+button:hover {
+  cursor: pointer;
+}
