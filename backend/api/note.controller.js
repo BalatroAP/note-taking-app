@@ -1,4 +1,3 @@
-import { response } from "express";
 import NoteDao from "../dao/noteDAO.js";
 
 export default class NoteController {

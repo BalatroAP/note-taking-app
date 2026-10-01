@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import app from "./server.js";
 import NoteDao from "./dao/noteDAO.js";
+import UserDAO from "./dao/usersDAO.js";
 
 async function main() {
   const PORT = process.env.PORT || 5001;
@@ -13,6 +14,7 @@ async function main() {
     });
 
     NoteDao.injectDB(client);
+    UserDAO.injectDB(client);
 
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
