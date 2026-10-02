@@ -9,6 +9,7 @@ router.use(AuthMiddleware.verifyToken);
 
 router.get("/", NoteController.getNotes);
 router.post("/new", NoteController.newNote);
-router.put("/update", NoteController.updateNote);
+router.put("/update/:id", NoteController.updateNote);
+router.delete("/delete/:id", NoteController.deleteNote);
 
 export default router;

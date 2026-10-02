@@ -56,8 +56,16 @@ export default class AuthController {
         return res.status(400).json({ error: "invalid credentials" });
       }
 
-      accessToken = this.generateToken(user._id, "accessToken", "15m");
-      refreshToken = this.generateToken(user._id, "refreshToken", "7d");
+      accessToken = this.generateToken(
+        { id: user._id, username: user.username, email: user.email },
+        "accessToken",
+        "15m",
+      );
+      refreshToken = this.generateToken(
+        { id: user._id, username: user.username, email: user.email },
+        "refreshToken",
+        "7d",
+      );
 
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
@@ -89,8 +97,17 @@ export default class AuthController {
       if (!user) {
         return res.status(404).json({ error: "User not found" });
       }
+      console.log(user);
 
-      const newAccessToken = this.generateToken(user._id, "accessToken", "15m");
+      const newAccessToken = this.generateToken(
+        {
+          id: user._id,
+          username: user.username,
+          email: user.email,
+        },
+        "accessToken",
+        "15m",
+      );
 
       res.status(200).json({
         accessToken: newAccessToken,
@@ -117,7 +134,7 @@ export default class AuthController {
     }
   };
 
-  static generateToken = (id, secret, expiration) => {
-    return jwt.sign({ id }, secret, { expiresIn: expiration });
+  static generateToken = (data, secret, expiration) => {
+    return jwt.sign(data, secret, { expiresIn: expiration });
   };
 }
