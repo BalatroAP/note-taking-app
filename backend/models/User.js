@@ -5,7 +5,7 @@ const schemaInfo = {
   required: true,
 };
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     username: schemaInfo,
     email: schemaInfo,
@@ -14,4 +14,4 @@ const userSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-export default mongoose.model("User", userSchema);
+export default mongoose.model("User", UserSchema);
