@@ -1,31 +1,7 @@
 :root {
-  --first: #606c38;
-  --second: #283618;
-  --third: #fefae0;
-  --fourth: #dda15e;
-  --fifth: #bc6c25;
-}
-
-.App {
-  padding: 10px;
-}
-
-ul {
-  display: flex;
-  background-color: var(--third);
-  gap: 20px;
-  padding: 10px;
-  list-style: none;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-}
-
-.nav {
-  text-decoration: none;
-  color: black;
-}
-
-.nav:hover {
-  color: var(--fifth);
+  --one: #171614;
+  --two: #3a2618;
+  --three: #754043;
+  --four: #9a8873;
+  --five: #37423d;
 }

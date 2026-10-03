@@ -1,13 +1,14 @@
 :root {
-  --first: #606c38;
-  --second: #283618;
-  --third: #fefae0;
-  --fourth: #dda15e;
-  --fifth: #bc6c25;
+  --one: #171614;
+  --two: #3a2618;
+  --three: #754043;
+  --four: #9a8873;
+  --five: #37423d;
 }
 
 body {
-  background-color: var(--first);
+  background-color: var(--one);
+  color: var(--four);
   margin: 0;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",

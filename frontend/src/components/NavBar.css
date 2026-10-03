@@ -1,0 +1,22 @@
+:root {
+  --one: #171614;
+  --two: #3a2618;
+  --three: #754043;
+  --four: #9a8873;
+  --five: #37423d;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+a {
+  color: var(--four);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--three);
+}
